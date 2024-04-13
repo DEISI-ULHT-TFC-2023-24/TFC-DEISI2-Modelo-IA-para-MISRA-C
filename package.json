@@ -1,0 +1,218 @@
+{
+  "name": "chatgpt-plus-misra-c",
+  "displayName": "ChatGPT with misra-c rules",
+  "description": "ChatGPT with misra-c rules",
+  "version": "1.0.2",
+  "publisher": "SANTOS",
+  "icon": "resources/extensionIcon.png",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/alex-a22103429/gpteco"
+  },
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "chatgpt",
+    "openai",
+    "gpt3",
+    "gpt4",
+    "copilot",
+    "ai",
+    "explain",
+    "find bugs",
+    "explain ",
+    "refactor"
+  ],
+  "activationEvents": [
+    "onView:chatgpt.chatView",
+    "onCommand:chatgpt.ask",
+    "onCommand:chatgpt.misracrules"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chatgpt.ask",
+        "title": "Ask ChatGPT"
+      },
+      {
+        "command": "chatgpt.misracrules",
+        "title": "ChatGPT: misracrules"
+      },
+      {
+        "command": "chatgpt.resetConversation",
+        "title": "Reset ChatGPT conversation"
+      },
+      {
+        "command": "chatgpt.tryAgain",
+        "title": "Retry ChatGPT request"
+      },
+      {
+        "command": "chatgpt.addapmisrac",
+        "title": "Addapt to MISRA C rules Command"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "chatgpt.ask",
+          "when": "editorTextFocus",
+          "group": "chatgpt-menu-group@1"
+        },
+        {
+          "command": "chatgpt.misracrules",
+          "when": "editorHasSelection",
+          "group": "chatgpt-menu-group@2"
+        },
+        {
+          "command": "chatgpt.addapmisrac",
+          "when": "editorTextFocus",
+          "group": "chatgpt-menu-group@3"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "chatgpt.ask"
+        },
+        {
+          "command": "chatgpt.misracrules",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "chatgpt.resetConversation"
+        },
+        {
+          "command": "chatgpt.addapmisrac",
+          "whem": "editorTextFocus"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "chatgpt",
+          "title": "CHATEXPLORER",
+          "icon": "resources/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "chatgpt": [
+        {
+          "type": "webview",
+          "id": "chatgpt.chatView",
+          "name": "CHATEXPLORER"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CHATEXPLORER",
+      "type": "object",
+      "properties": {
+        "chatgpt.apiKey": {
+          "markdownDescription": "OpenAI API key from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)",
+          "type": "string",
+          "order": 0
+        },
+        "chatgpt.apiUrl": {
+          "markdownDescription": "OpenAI API URL or other custom API URL. Defaults to [https://api.openai.com/v1](https://api.openai.com/v1)",
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "order": 1
+        },
+        "chatgpt.model": {
+          "type": "string",
+          "enum": [
+            "gpt-3.5-turbo",
+            "gpt-4"
+          ],
+          "default": "gpt-3.5-turbo",
+          "description": "Which GPT model to use",
+          "order": 1
+        },
+        "chatgpt.pasteOnClick": {
+          "type": "boolean",
+          "default": true,
+          "description": "Paste the code from a codeblock inside the response into the editor when you click on it",
+          "order": 2
+        },
+        "chatgpt.promptPrefix.misracrules": {
+          "type": "string",
+          "default": "Aplly me all misrac rules  ",
+          "description": "The prompt prefix used for explaining the selected code",
+          "order": 3
+        },
+        "chatgpt.keepConversation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Keep the conversation going by using the same conversation ID for all requests (allows follow-up questions)",
+          "order": 4
+        },
+        "chatgpt.timeoutLength": {
+          "type": "number",
+          "default": "120",
+          "description": "How long should the request wait for a response before timing out (in seconds)",
+          "order": 5
+        },
+        "chatgpt.selectedInsideCodeblock": {
+          "type": "boolean",
+          "default": true,
+          "description": "Append selected code as a codeblock (```...code...```) instead of plain text",
+          "order": 6
+        },
+        "chatgpt.codeblockWithLanguageId": {
+          "type": "boolean",
+          "default": true,
+          "description": "Append language id of the selected code to the codeblock (```language...code...```)",
+          "order": 7
+        },
+        "chatgpt.temperature": {
+            "type": "number",
+            "default": 0.5,
+            "description": "The temperature value used by the GPT model (a higher value means more randomness)",
+            "order": 8
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "update-package-lock": "npm install --package-lock-only"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "chatgpt": "^5.2.5",
+    "gpt3-tokenizer": "^1.1.5",
+    "keyv": "^4.5.4",
+    "node-fetch": "^3.3.0",
+    "package-name": "^0.1.0",
+    "tokenize-comment": "^3.0.1"
+  }
+}
