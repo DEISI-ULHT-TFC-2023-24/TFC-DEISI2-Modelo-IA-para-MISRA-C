@@ -6,7 +6,7 @@
 
 ## Features
 
-- **With right click**  
+- **With right click** 🖲️ 
     - You can ask any question to chatgpt `Ask ChatGPT`
     - With this option `ChatGPT: misracrules` you can change the prompt too on the settings
     - This option is a generic cannot be change `Addapt to MISRA C rules Command`
