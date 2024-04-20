@@ -32,6 +32,10 @@
 5. Click on the option `Install from VSIX...`
 6. Choose the file `chatgpt-plus-misra-c-1.0.2.vsix`
 7. Close and open visual studio code 
+8. Go to settings 
+    - option `>Extensions`
+    - option `CHATEXPLORER` 
+    - put your api key
 
 # video
 https://youtu.be/46Zp5LWldPQ
