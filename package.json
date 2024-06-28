@@ -1,8 +1,8 @@
 {
   "name": "chatgpt-plus-misra-c",
-  "displayName": "ChatGPT with misra-c rules",
-  "description": "ChatGPT with misra-c rules",
-  "version": "1.0.2",
+  "displayName": "ChatGPT with MISRA-C rules",
+  "description": "ChatGPT with MISRA-C rules",
+  "version": "1.0.3",
   "publisher": "SANTOS",
   "icon": "resources/extensionIcon.png",
   "license": "MIT",
@@ -24,7 +24,6 @@
     "ai",
     "explain",
     "find bugs",
-    "explain ",
     "refactor"
   ],
   "activationEvents": [
@@ -41,7 +40,7 @@
       },
       {
         "command": "chatgpt.misracrules",
-        "title": "ChatGPT: misracrules"
+        "title": "ChatGPT: MISRA C Rules"
       },
       {
         "command": "chatgpt.resetConversation",
@@ -53,7 +52,7 @@
       },
       {
         "command": "chatgpt.addapmisrac",
-        "title": "Addapt to MISRA C rules Command"
+        "title": "Adapt to MISRA C rules"
       }
     ],
     "menus": {
@@ -87,7 +86,7 @@
         },
         {
           "command": "chatgpt.addapmisrac",
-          "whem": "editorTextFocus"
+          "when": "editorTextFocus"
         }
       ]
     },
@@ -95,7 +94,7 @@
       "activitybar": [
         {
           "id": "chatgpt",
-          "title": "CHATEXPLORER",
+          "title": "MISRARAIVOSO",
           "icon": "resources/icon.png"
         }
       ]
@@ -105,12 +104,12 @@
         {
           "type": "webview",
           "id": "chatgpt.chatView",
-          "name": "CHATEXPLORER"
+          "name": "MISRARAIVOSO"
         }
       ]
     },
     "configuration": {
-      "title": "CHATEXPLORER",
+      "title": "MISRARAIVOSO",
       "type": "object",
       "properties": {
         "chatgpt.apiKey": {
@@ -128,7 +127,9 @@
           "type": "string",
           "enum": [
             "gpt-3.5-turbo",
-            "gpt-4"
+            "gpt-4",
+            "gpt-4o",
+            "gpt-4-turbo"
           ],
           "default": "gpt-3.5-turbo",
           "description": "Which GPT model to use",
@@ -142,7 +143,7 @@
         },
         "chatgpt.promptPrefix.misracrules": {
           "type": "string",
-          "default": "Aplly me all misrac rules  ",
+          "default": "Apply all MISRA C rules",
           "description": "The prompt prefix used for explaining the selected code",
           "order": 3
         },
@@ -154,7 +155,7 @@
         },
         "chatgpt.timeoutLength": {
           "type": "number",
-          "default": "120",
+          "default": 120,
           "description": "How long should the request wait for a response before timing out (in seconds)",
           "order": 5
         },
@@ -167,14 +168,14 @@
         "chatgpt.codeblockWithLanguageId": {
           "type": "boolean",
           "default": true,
-          "description": "Append language id of the selected code to the codeblock (```language...code...```)",
+          "description": "Append language ID of the selected code to the codeblock (```language...code...```)",
           "order": 7
         },
         "chatgpt.temperature": {
-            "type": "number",
-            "default": 0.5,
-            "description": "The temperature value used by the GPT model (a higher value means more randomness)",
-            "order": 8
+          "type": "number",
+          "default": 0.5,
+          "description": "The temperature value used by the GPT model (a higher value means more randomness)",
+          "order": 8
         }
       }
     }
@@ -211,8 +212,7 @@
     "chatgpt": "^5.2.5",
     "gpt3-tokenizer": "^1.1.5",
     "keyv": "^4.5.4",
-    "node-fetch": "^3.3.0",
-    "package-name": "^0.1.0",
+    "node-fetch": "^3.3.1",
     "tokenize-comment": "^3.0.1"
   }
 }

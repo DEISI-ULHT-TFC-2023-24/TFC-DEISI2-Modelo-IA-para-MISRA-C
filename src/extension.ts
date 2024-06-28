@@ -393,7 +393,7 @@ class ChatGPTViewProvider implements vscode.WebviewViewProvider {
 			</style>
 		</head>
 		<body>
-			<textarea class="text-white bg-stone-700 p-4 text-sm" placeholder="Ask ChatEXPLORER something" id="prompt-input"></textarea>
+			<textarea class="text-white bg-stone-700 p-4 text-sm" placeholder="Ask MISRARAIVOSO something" id="prompt-input"></textarea>
 
 			<button class="btn" onclick="clearInput()">Clear</button>
 			<button class="btn">Addapt to MISRA-C rules</button>
