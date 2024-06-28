@@ -1,0 +1,11 @@
+confboard 1
+confboard 0
+confadd 1
+confboard 1
+confadd 2
+confadd 3
+confadd 4
+confadd 5
+confboard 1
+confstart
+s

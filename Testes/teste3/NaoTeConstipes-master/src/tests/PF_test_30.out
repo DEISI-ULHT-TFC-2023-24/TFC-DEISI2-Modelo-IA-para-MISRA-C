@@ -1,0 +1,20 @@
++--------------------------------------------------------+
+|         Nao Te Constipes - configs                     |
++--------------------------------------------------------+
+| confadd <numero>    - adicionar casa segura            |
+| confsave <nome>     - gravar ficheiro de casas seguras |
+| confboard <numero>  - mostrar o tabuleiro              |
+| confstart <numero>  - iniciar o jogo                   |
+| confmenu            - imprimir menu                    |
++--------------------------------------------------------+
+>0 abcd.1 .2 .3 .4 .5 .6 .7 .8 wxyz.9 .10 .11 .12 .13 .14 .15 .
++------------------------------------+
+|         Nao Te Constipes           |
++------------------------------------+
+| <id do peao> (abcd, xyzw)          |
+| s - sair                           |
+| h - imprimir menu                  |
++------------------------------------+
+------ Jogador 1 ------
+Jogador lancou dados com valor 8 
+>Fim do jogo

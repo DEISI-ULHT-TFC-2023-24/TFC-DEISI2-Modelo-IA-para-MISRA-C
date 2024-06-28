@@ -1,0 +1,97 @@
++--------------------------------------------------------+
+|         Nao Te Constipes - configs                     |
++--------------------------------------------------------+
+| confadd <numero>    - adicionar casa segura            |
+| confsave <nome>     - gravar ficheiro de casas seguras |
+| confboard <numero>  - mostrar o tabuleiro              |
+| confstart <numero>  - iniciar o jogo                   |
+| confmenu            - imprimir menu                    |
++--------------------------------------------------------+
+>0 abcd.1 .2 .3 .4 .5 .6 .7 .8 wxyz.9 .10 .11 .12 .13 .14 .15 .
++------------------------------------+
+|         Nao Te Constipes           |
++------------------------------------+
+| <id do peao> (abcd, xyzw)          |
+| s - sair                           |
+| h - imprimir menu                  |
++------------------------------------+
+------ Jogador 1 ------
+Jogador lancou dados com valor 7 
+>0 bcd.1 .2 .3 .4 .5 .6 .7 a.8 wxyz.9 .10 .11 .12 .13 .14 .15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 6 
+>0 bcd.1 .2 .3 .4 .5 .6 .7 a.8 xyz.9 .10 .11 .12 .13 .14 w.15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 8 
+>0 bcd.1 .2 .3 .4 .5 .6 .7 .8 wxyz.9 .10 .11 .12 .13 .14 .15 a.
+------ Jogador 2 ------
+Jogador lancou dados com valor 6 
+>0 bcd.1 .2 .3 .4 .5 .6 .7 .8 xyz.9 .10 .11 .12 .13 .14 w.15 a.
+------ Jogador 1 ------
+Jogador lancou dados com valor 6 
+>0 Abcd.1 .2 .3 .4 .5 .6 .7 .8 xyz.9 .10 .11 .12 .13 .14 w.15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 5 
+>0 Abcd.1 .2 .3 .4 .5 .6 .7 .8 yz.9 .10 .11 .12 .13 x.14 w.15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 5 
+>0 Acd.1 .2 .3 .4 .5 b.6 .7 .8 yz.9 .10 .11 .12 .13 x.14 w.15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 11 
+>0 Acd.1 .2 .3 y.4 .5 b.6 .7 .8 z.9 .10 .11 .12 .13 x.14 w.15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 2 
+>0 Acd.1 .2 .3 y.4 .5 .6 .7 b.8 z.9 .10 .11 .12 .13 x.14 w.15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 10 
+>0 Abcd.1 .2 .3 y.4 .5 .6 .7 .8 Wz.9 .10 .11 .12 .13 x.14 .15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 9 
+>0 Acd.1 .2 .3 .4 .5 .6 .7 .8 Wyz.9 b.10 .11 .12 .13 x.14 .15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 8 
+>0 Acd.1 .2 .3 .4 .5 x.6 .7 .8 Wyz.9 b.10 .11 .12 .13 .14 .15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 6 
+>0 Acd.1 .2 .3 .4 .5 x.6 .7 .8 Wyz.9 .10 .11 .12 .13 .14 .15 b.
+------ Jogador 2 ------
+Jogador lancou dados com valor 5 
+>0 Acd.1 .2 .3 .4 .5 x.6 .7 .8 Wy.9 .10 .11 .12 .13 z.14 .15 b.
+------ Jogador 1 ------
+Jogador lancou dados com valor 4 
+>0 Ad.1 .2 .3 .4 c.5 x.6 .7 .8 Wy.9 .10 .11 .12 .13 z.14 .15 b.
+------ Jogador 2 ------
+Jogador lancou dados com valor 7 
+>0 Abd.1 .2 .3 .4 c.5 x.6 .7 .8 W.9 .10 .11 .12 .13 z.14 .15 y.
+------ Jogador 1 ------
+Jogador lancou dados com valor 2 
+>0 Ab.1 .2 d.3 .4 c.5 x.6 .7 .8 W.9 .10 .11 .12 .13 z.14 .15 y.
+------ Jogador 2 ------
+Jogador lancou dados com valor 10 
+>0 Abcd.1 .2 .3 .4 .5 x.6 .7 .8 WY.9 .10 .11 .12 .13 z.14 .15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 7 
+>0 Abc.1 .2 .3 .4 .5 .6 .7 d.8 WxY.9 .10 .11 .12 .13 z.14 .15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 7 
+>0 Abc.1 .2 .3 .4 z.5 .6 .7 d.8 WxY.9 .10 .11 .12 .13 .14 .15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 8 
+>0 Abc.1 .2 .3 .4 z.5 .6 .7 .8 WxY.9 .10 .11 .12 .13 .14 .15 d.
+------ Jogador 2 ------
+Jogador lancou dados com valor 10 
+>0 Abc.1 .2 .3 .4 .5 .6 .7 .8 WxYZ.9 .10 .11 .12 .13 .14 .15 d.
+------ Jogador 1 ------
+Jogador lancou dados com valor 5 
+>0 AbcD.1 .2 .3 .4 .5 .6 .7 .8 WxYZ.9 .10 .11 .12 .13 .14 .15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 6 
+>0 AbcD.1 .2 .3 .4 .5 .6 .7 .8 WYZ.9 .10 .11 .12 .13 .14 x.15 .
+------ Jogador 1 ------
+Jogador lancou dados com valor 7 
+>0 AcD.1 .2 .3 .4 .5 .6 .7 b.8 WYZ.9 .10 .11 .12 .13 .14 x.15 .
+------ Jogador 2 ------
+Jogador lancou dados com valor 11 
+>0 AbcD.1 .2 .3 .4 .5 .6 .7 .8 WXYZ.9 .10 .11 .12 .13 .14 .15 .
+Jogador 2 Ganhou!
+Fim do jogo

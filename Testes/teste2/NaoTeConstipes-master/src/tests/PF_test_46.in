@@ -1,0 +1,9 @@
+confadd 1
+confadd 2
+confadd 5
+confadd 7
+confadd 8
+confsave ficheiro.casas
+confboard 1
+confstart
+s
