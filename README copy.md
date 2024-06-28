@@ -3,7 +3,9 @@
 
 [![version](https://img.shields.io/badge/version-1.0.2-green.svg)](https://semver.org)
 
-
+## Texto e imagem para apresentação e divulgação do trabalho
+Neste trabalho, realizamos uma análise comparativa entre os modelos GPT-4 e GPT-4O na aplicação das regras MISRA-C 2012, essenciais para garantir a qualidade e segurança do código C. Utilizando métricas de precisão, recall e outras, avaliamos o desempenho dos modelos na detecção e correção de violações das regras. As melhorias sugeridas incluem a otimização de prompts e a inclusão de uma maior variedade de exemplos de código para aprimorar a eficácia dos modelos. Este estudo visa proporcionar uma abordagem mais robusta e precisa na conformidade com as normas MISRA-C, contribuindo para o desenvolvimento de um plugin.
+![deisi2_apresentacaoImagem_Alexandre_Santos_a22103429.png](deisi2_apresentacaoImagem_Alexandre_Santos_a22103429.png)
 ## Features
 
 - **With right click** 🖲️
